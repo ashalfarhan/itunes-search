@@ -3,7 +3,7 @@ import axios from "axios";
 export default async function({ params, store }) {
   try {
     const response = await axios.get(
-      `https://itunes.apple.com/search?term=${params.id}&media=music`
+      `https://itunes.apple.com/search?term=${params.id}`
     );
     const {
       data: { results }
