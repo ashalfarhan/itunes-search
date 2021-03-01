@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main h-screen overflow-x-hidden w-screen">
     <app-header />
     <Nuxt />
   </div>
@@ -16,6 +16,15 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  background-image: url("/bg0.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 *,
