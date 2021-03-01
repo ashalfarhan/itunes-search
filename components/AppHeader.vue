@@ -1,7 +1,9 @@
 <template>
   <header class="w-screen bg-green-600">
     <div class="w-11/12 mx-auto">
-      <h1 class="py-4 text-center uppercase font-semibold text-2xl text-white">
+      <h1
+        class="py-4 text-center font-poppins uppercase font-semibold text-2xl text-white"
+      >
         Search songs on itunes
       </h1>
     </div>
