@@ -1,15 +1,18 @@
 <template>
-  <div class="h-full">
-    <div class="w-11/12 mx-auto flex items-center justify-center h-full">
+  <div class="bg-inherit h-full">
+    <div
+      class="bg-inherit w-11/12 mx-auto flex items-center justify-center h-full"
+    >
       <form
-        class="form pt-4 relative shadow-2xl rounded-xl w-full flex justify-center max-w-sm mx-auto items-stretch flex-col"
+        class="bg-inherit form pt-4 relative shadow-2xl rounded-xl w-full flex justify-center max-w-sm mx-auto items-stretch flex-col"
         @submit.prevent="handleSubmit"
       >
+        <img src="/logo.svg" class="w-64 mx-auto" />
         <input
           type="text"
           placeholder="artist, albums, single, song"
           v-model="userInput"
-          class="focus:outline-none py-2 border-b-2 text-2xl bg-transparent text-white border-white text-center"
+          class="focus:outline-none py-2 border-b-2 text-2xl bg-transparent border-white text-center"
         />
         <input
           class="py-4 font-poppins uppercase px-2 cursor-pointer bg-transparent font-semibold rounded-xl mt-4"
@@ -44,16 +47,19 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.form::after {
+input::placeholder {
+  color: black;
+}
+.form::before {
   content: "";
   border-radius: 10px;
   background: inherit;
   position: absolute;
-  left: -10px;
+  left: 0px;
   right: 0;
-  top: -10px;
+  top: 0px;
   bottom: 0;
-  box-shadow: inset 0 200px 200px 200px rgba(255, 255, 255, 0.05);
-  filter: blur(5px);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.45);
+  filter: blur(1px);
 }
 </style>
