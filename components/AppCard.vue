@@ -52,16 +52,16 @@ export default Vue.extend({
 });
 </script>
 <style scoped>
-.card::after:hover {
+.card::before {
   content: "";
   border-radius: 10px;
   background: inherit;
   position: absolute;
-  left: -10px;
+  left: 0px;
   right: 0;
   top: 0px;
   bottom: 0;
-  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.15);
   filter: blur(1px);
 }
 </style>
