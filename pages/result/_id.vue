@@ -8,7 +8,7 @@
     </h1>
     <div
       v-if="results.length"
-      class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12"
+      class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-12"
     >
       <app-card
         v-for="(result, idx) in results"
