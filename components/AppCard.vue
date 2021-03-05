@@ -6,11 +6,11 @@
   >
     <img :src="result.artworkUrl100" />
     <div class="font-poppins">
-      <h1 class="font-medium tracking-wider">
-        {{ shortText(result.artistName) }}
-      </h1>
-      <h1>
+      <h1 class="text-lg">
         {{ shortText(result.trackName) }}
+      </h1>
+      <h1 class="font-medium">
+        {{ shortText(result.artistName) }}
       </h1>
       <p class="text-sm">
         Price: {{ result.collectionPrice }} {{ result.currency }}
