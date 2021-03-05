@@ -4,7 +4,7 @@
     @mouseleave="handleLeave"
     class="list-none space-x-2 bg-inherit relative card rounded-xl p-4 flex items-center transform transition ease-in-out duration-75 origin-bottom cursor-pointer hover:shadow-2xl hover:scale-110 md:hover:scale-125"
   >
-    <img :src="result.artworkUrl100" />
+    <img :src="result.artworkUrl100" class="rounded-md" />
     <div class="font-poppins">
       <h1 class="text-lg">
         {{ shortText(result.trackName) }}
