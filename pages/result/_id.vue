@@ -6,7 +6,7 @@
       class="font-poppins text-white uppercase hover:underline"
       >Go back home</nuxt-link
     >
-    <div v-if="results.length">
+    <div v-if="results.length || resultsMatch">
       <h1 class="text-2xl text-white font-poppins">
         Here's the results of {{ searchResult }}
       </h1>
@@ -40,6 +40,13 @@ export default Vue.extend({
     },
     searchResult() {
       return this.$route.params.id.split("+").join(" ");
+    },
+    resultsMatch() {
+      return this.$store.getters.getResults.some(
+        (item: any) =>
+          item.artistName.toLowerCase() === this.searchResult.toLowerCase() ||
+          item.trackName.toLowerCase() === this.searchResult.toLowerCase()
+      );
     }
   },
   methods: {
