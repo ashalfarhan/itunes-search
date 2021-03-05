@@ -1,20 +1,27 @@
 <template>
   <div class="w-11/12 mx-auto mt-4">
-    <nuxt-link to="/" class="font-poppins text-white uppercase hover:underline"
+    <nuxt-link
+      to="/"
+      @click="handleHome"
+      class="font-poppins text-white uppercase hover:underline"
       >Go back home</nuxt-link
     >
-    <h1 class="text-2xl text-white font-poppins">
-      Here's the results of {{ searchResult }}
-    </h1>
-    <div
-      v-if="results.length"
-      class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-12"
-    >
-      <app-card
-        v-for="(result, idx) in results"
-        :key="idx"
-        :result="result"
-      ></app-card>
+    <div v-if="results.length">
+      <h1 class="text-2xl text-white font-poppins">
+        Here's the results of {{ searchResult }}
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-12">
+        <app-card
+          v-for="(result, idx) in results"
+          :key="idx"
+          :result="result"
+        />
+      </div>
+    </div>
+    <div v-else>
+      <h1 class="text-2xl text-white font-poppins">
+        Oops! Cannot find the result
+      </h1>
     </div>
   </div>
 </template>
@@ -29,10 +36,15 @@ export default Vue.extend({
   middleware: "search",
   computed: {
     results() {
-      return this.$store.state.results;
+      return this.$store.getters.getResults;
     },
     searchResult() {
       return this.$route.params.id.split("+").join(" ");
+    }
+  },
+  methods: {
+    handleHome() {
+      this.$store.commit("clearStore");
     }
   }
 });
