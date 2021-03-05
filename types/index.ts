@@ -1,5 +1,5 @@
-export type Payload = string[];
+export type Payload = object[];
 
 export interface State {
-  results: string[];
+  results: Payload;
 }
