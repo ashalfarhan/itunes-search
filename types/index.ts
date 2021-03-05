@@ -1,4 +1,4 @@
-export type Payload = string | string[];
+export type Payload = string[];
 
 export interface State {
   results: string[];
