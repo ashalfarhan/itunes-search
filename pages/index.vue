@@ -52,6 +52,7 @@ input::placeholder {
 }
 .form::before {
   content: "";
+  z-index: -1;
   border-radius: 10px;
   background: inherit;
   position: absolute;
