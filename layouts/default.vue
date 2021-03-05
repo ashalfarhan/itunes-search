@@ -2,6 +2,17 @@
   <div class="main h-screen overflow-x-hidden w-screen">
     <app-header />
     <Nuxt />
+    <footer>
+      <p class="text-center py-4 text-lg">
+        Developed by
+        <a
+          class="text-green-600 font-semibold"
+          target="_blank"
+          href="https://github.com/ashalfarhan8"
+          >Ashal Farhan</a
+        >
+      </p>
+    </footer>
   </div>
 </template>
 
