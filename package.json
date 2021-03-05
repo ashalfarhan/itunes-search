@@ -1,12 +1,14 @@
 {
-  "name": "usm",
+  "name": "itunes-search",
+  "author": "Ashal Farhan",
+  "description": "A simple project searching songs on itunes",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },
@@ -16,7 +18,6 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/vercel-builder": "^0.21.2",
     "core-js": "^3.8.3",
-    "express": "^4.17.1",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
