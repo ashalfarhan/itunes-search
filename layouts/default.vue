@@ -8,7 +8,7 @@
         <a
           class="text-green-600 font-semibold"
           target="_blank"
-          href="https://github.com/ashalfarhan8"
+          href="https://github.com/ashalfarhan"
           >Ashal Farhan</a
         >
       </p>
